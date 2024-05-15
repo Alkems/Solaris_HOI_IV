@@ -1,0 +1,14 @@
+state={
+	id=16
+	name="STATE_16"
+	history={
+		owner = EUR
+		add_core_of = EUR
+	}
+	provinces={
+		13017 
+	}
+	buildings_max_level_factor=1.000
+        manpower=910000
+        state_category = wasteland
+}

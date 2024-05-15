@@ -1,0 +1,30 @@
+bookmarks = {
+	bookmark = {
+		name = "New Dawn Bookmark"
+		desc = "NEW_DAWN_BOOKMARK_LOC"
+		date = 2120.1.1.12
+		picture = "GFX_new_dawn_bookmark"
+		default_country = "LUN"
+	
+		"LUN"={
+			history = LUN_NDB_DESC_LOC
+			ideology = fascism
+		}
+		"EUR"={
+			history = EUR_NDB_DESC_LOC
+			ideology = democratic
+		}
+		"RUS"={
+			history = RUS_NDB_DESC_LOC
+			ideology = communism
+		}
+		"GCH"={
+			history = CHI_NDB_DESC_LOC
+			ideology = communism
+		}
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

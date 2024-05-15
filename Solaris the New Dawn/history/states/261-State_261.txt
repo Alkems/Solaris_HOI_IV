@@ -1,0 +1,23 @@
+state={
+	id=261
+	name="Harjumaa"
+	history={
+		owner = EUR
+		victory_points = { 7867 20 }
+		victory_points = { 2834 20 }
+		victory_points = { 1953 20 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		1165 1745 1918 1953 2834 4146 4539 5054 5080 5618 7760 7769 7793 7867 7868 7958 8066 
+	}
+	buildings_max_level_factor=1.000
+        manpower=7523032
+        state_category = city
+}

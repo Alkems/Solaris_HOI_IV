@@ -1,0 +1,19 @@
+state={
+	id=8
+	name="STATE_8"
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = RUS
+	}
+	provinces={
+		1338 1716 2702 4624 5509 6116 6973 7001 7072 7075 7093 7108 
+	}
+	buildings_max_level_factor=1.000
+        manpower=2500000
+        state_category = city
+}

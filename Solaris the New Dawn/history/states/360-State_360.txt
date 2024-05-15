@@ -1,0 +1,19 @@
+state={
+	id=360
+	name="STATE_360"
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 2
+		}
+		add_core_of = RUS
+	}
+	provinces={
+		1227 4431 5652 
+	}
+	buildings_max_level_factor=1.000
+        manpower=12500231
+        state_category = city
+}

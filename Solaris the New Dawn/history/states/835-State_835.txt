@@ -1,0 +1,10 @@
+state={
+	id=835
+	name="STATE_835"
+	provinces={
+		890 1099 3322 3919 4057 4806 12033 12182 12223 12224 12288 12307 12376 
+	}
+	buildings_max_level_factor=1.000
+        manpower=2500000
+        state_category = city
+}

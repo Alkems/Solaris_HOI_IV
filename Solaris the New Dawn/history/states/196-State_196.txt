@@ -1,0 +1,14 @@
+state={
+	id=196
+	name="STATE_196"
+	history={
+		owner = EUR
+		add_core_of = EUR
+	}
+	provinces={
+		3810 4250 7434 
+	}
+	buildings_max_level_factor=1.000
+        manpower=530570
+        state_category = town
+}

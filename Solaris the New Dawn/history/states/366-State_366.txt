@@ -1,0 +1,18 @@
+state={
+	id=366
+	name="STATE_366"
+	history={
+		owner = EUR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 6
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		1191 1741 4721 5677 8432 8530 8652 8676 8779 
+	}
+	buildings_max_level_factor=1.000
+        manpower=5700262
+        state_category = city
+}

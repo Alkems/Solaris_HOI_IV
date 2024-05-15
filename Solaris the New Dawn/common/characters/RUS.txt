@@ -1,0 +1,14 @@
+characters = {
+    GFX_portrait_elena = {
+        name = GFX_portrait_elena
+        portraits = {
+            civilian = {
+                large = GFX_portrait_elena
+            }
+        }
+        country_leader = {
+            ideology = stalinism
+            traits = {  }
+        }
+    }
+}

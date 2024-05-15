@@ -1,0 +1,29 @@
+state={
+	id=23
+	name="STATE_23"
+	resources={
+		tungsten=3
+		oil=32
+		steel=7
+		aluminium=3
+		rubber=2
+	}
+	history={
+		owner = GCH
+		victory_points = { 9983 50 }
+		buildings = {
+			infrastructure = 5
+			arms_factory = 2
+			industrial_complex = 2
+			dockyard = 2
+			air_base = 10
+		}
+		add_core_of = GCH
+	}
+	provinces={
+		3636 9983 10097 
+	}
+	buildings_max_level_factor=1.000
+        manpower=42500000
+        state_category = city
+}

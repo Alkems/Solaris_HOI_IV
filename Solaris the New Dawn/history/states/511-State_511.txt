@@ -1,0 +1,28 @@
+state={
+	id=511
+	name="STATE_511"
+	resources={
+		tungsten=33
+		oil=320
+		steel=70
+		aluminium=32
+		rubber=25
+	}
+	history={
+		owner = GCH
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 4
+			dockyard = 2
+			air_base = 10
+		}
+		add_core_of = GCH
+	}
+	provinces={
+		685 705 844 1334 1722 2229 2285 3031 3389 3903 4718 4788 5448 5450 5827 6239 6353 9435 9530 9582 9626 9627 9683 9694 9740 9753 9754 9874 9912 9957 9958 10026 10034 10220 10239 10331 
+	}
+	buildings_max_level_factor=1.000
+        manpower=222500000
+        state_category = megalopolis
+}

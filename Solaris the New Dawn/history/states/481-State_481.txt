@@ -1,0 +1,10 @@
+state={
+	id=481
+	name="STATE_481"
+	provinces={
+		80 637 775 1580 2369 4213 4435 5070 5876 6384 9377 9469 9498 9557 9584 9648 9686 9705 9766 9767 9863 
+	}
+	buildings_max_level_factor=1.000
+        manpower=2500000
+        state_category = city
+}

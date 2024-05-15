@@ -1,0 +1,21 @@
+state={
+	id=446
+	name="Rome"
+	history={
+		owner = EUR
+		victory_points = { 8986 20 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		970 1558 1816 4354 5760 8986 9063 9147 9401 9542 
+	}
+	buildings_max_level_factor=1.000
+        manpower=19500000
+        state_category = city
+}

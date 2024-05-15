@@ -1,0 +1,14 @@
+characters = {
+    GFX_portrait_helga = {
+        name = GFX_portrait_helga
+        portraits = {
+            civilian = {
+                large = GFX_portrait_helga
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {  }
+        }
+    }
+}

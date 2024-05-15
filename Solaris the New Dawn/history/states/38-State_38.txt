@@ -1,0 +1,14 @@
+state={
+	id=38
+	name="STATE_38"
+	history={
+		owner = LUN
+		add_core_of = LUN
+	}
+	provinces={
+		1088 1539 6440 
+	}
+	buildings_max_level_factor=1.000
+        manpower=60320
+        state_category = wasteland
+}

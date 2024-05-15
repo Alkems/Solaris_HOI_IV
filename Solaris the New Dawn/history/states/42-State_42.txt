@@ -1,0 +1,21 @@
+state={
+	id=42
+	name="Selenopolis"
+	history={
+		owner = LUN
+		victory_points = { 339 70 }
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 1
+		}
+		add_core_of = LUN
+	}
+	provinces={
+		68 159 249 339 866 1905 1928 3027 3041 3488 3571 4175 4273 5109 5990 6449 6453 6464 
+	}
+	buildings_max_level_factor=1.000
+        manpower=9560203
+        state_category = city
+}

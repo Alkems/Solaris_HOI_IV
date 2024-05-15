@@ -1,0 +1,19 @@
+state={
+	id=13
+	name="Reykvjavik"
+	history={
+		owner = EUR
+		victory_points = { 1832 20 }
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		1751 1832 6066 7433 7542 
+	}
+	buildings_max_level_factor=1.000
+        manpower=932000
+        state_category = town
+}

@@ -1,0 +1,19 @@
+state={
+	id=303
+	name="Kaasan"
+	history={
+		owner = RUS
+		victory_points = { 5143 40 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = RUS
+	}
+	provinces={
+		2261 3327 4198 5143 7919 8038 8120 8294 
+	}
+	buildings_max_level_factor=1.000
+        manpower=2500000
+        state_category = city
+}

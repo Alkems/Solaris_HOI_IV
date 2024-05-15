@@ -1,0 +1,21 @@
+state={
+	id=421
+	name="Istanbul"
+	history={
+		owner = EUR
+		victory_points = { 9012 25 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		2159 3199 9012 9064 9065 9138 9171 9199 9303 
+	}
+	buildings_max_level_factor=1.000
+        manpower=2500000
+        state_category = city
+}

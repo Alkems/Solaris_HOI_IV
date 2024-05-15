@@ -1,0 +1,19 @@
+state={
+	id=273
+	name="STATE_273"
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = RUS
+	}
+	provinces={
+		1526 1763 3444 3877 3895 4094 4147 4494 4619 5233 5245 7726 7843 7870 8052 8161 8197 8225 8317 
+	}
+	buildings_max_level_factor=1.000
+        manpower=2500000
+        state_category = city
+}

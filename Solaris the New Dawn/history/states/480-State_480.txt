@@ -1,0 +1,10 @@
+state={
+	id=480
+	name="STATE_480"
+	provinces={
+		58 673 2716 3999 4463 5728 5929 9124 9180 9398 9505 9616 9645 9701 9737 
+	}
+	buildings_max_level_factor=1.000
+        manpower=2500000
+        state_category = city
+}

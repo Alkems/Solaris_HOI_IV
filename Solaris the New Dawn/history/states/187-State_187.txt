@@ -1,0 +1,18 @@
+state={
+	id=187
+	name="STATE_187"
+	history={
+		owner = EUR
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		3404 5484 5844 6152 7330 7491 
+	}
+	buildings_max_level_factor=1.000
+        manpower=1720041
+        state_category = town
+}

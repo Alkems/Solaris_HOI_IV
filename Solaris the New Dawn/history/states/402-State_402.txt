@@ -1,0 +1,28 @@
+state={
+	id=402
+	name="Bejing"
+	resources={
+		tungsten=13
+		oil=120
+		steel=50
+		aluminium=9
+		rubber=16
+	}
+	history={
+		owner = GCH
+		victory_points = { 8937 120 }
+		buildings = {
+			infrastructure = 5
+			arms_factory = 2
+			industrial_complex = 10
+			air_base = 10
+		}
+		add_core_of = GCH
+	}
+	provinces={
+		2245 2610 3282 3493 3530 3608 5567 8841 8886 8937 8949 9049 9066 9182 9314 
+	}
+	buildings_max_level_factor=1.000
+        manpower=375200000
+        state_category = megalopolis
+}

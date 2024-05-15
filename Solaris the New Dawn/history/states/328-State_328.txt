@@ -1,0 +1,21 @@
+state={
+	id=328
+	name="Stockholm"
+	history={
+		owner = EUR
+		victory_points = { 4007 20 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		381 387 1254 1422 2446 2515 2633 3505 3918 4007 5690 7710 7842 8050 8149 8274 8543 
+	}
+	buildings_max_level_factor=1.000
+        manpower=12503452
+        state_category = city
+}

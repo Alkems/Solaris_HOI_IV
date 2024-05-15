@@ -1,0 +1,20 @@
+state={
+	id=486
+	name="STATE_486"
+	history={
+		owner = EUR
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		3711 6142 9181 9237 9433 9442 
+	}
+	buildings_max_level_factor=1.000
+        manpower=2500000
+        state_category = city
+}

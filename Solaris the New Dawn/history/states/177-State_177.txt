@@ -1,0 +1,24 @@
+state={
+	id=177
+	name="STATE_177"
+	resources={
+		steel=74
+		aluminium=55
+	}
+	history={
+		owner = EUR
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		751 1037 1149 1584 2450 3045 5273 5637 5694 5799 7234 7329 7371 7416 7478 7543 7638 7673 7701 
+	}
+	buildings_max_level_factor=1.000
+        manpower=3507020
+        state_category = city
+}

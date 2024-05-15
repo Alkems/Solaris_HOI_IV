@@ -1,0 +1,20 @@
+state={
+	id=44
+	name="STATE_44"
+	history={
+		owner = LUN
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 1
+		}
+		add_core_of = LUN
+	}
+	provinces={
+		1202 1575 1727 2171 2787 2947 4841 5082 6458 6459 6461 6467 
+	}
+	buildings_max_level_factor=1.000
+        manpower=1200345
+        state_category = city
+}

@@ -1,0 +1,21 @@
+state={
+	id=288
+	name="London"
+	history={
+		owner = EUR
+		victory_points = { 8408 20 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = EUR
+	}
+	provinces={
+		2122 3639 8238 8331 8359 8408 8450 
+	}
+	buildings_max_level_factor=1.000
+        manpower=43630217
+        state_category = city
+}

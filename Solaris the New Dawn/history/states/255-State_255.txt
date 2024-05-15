@@ -1,0 +1,20 @@
+state={
+	id=255
+	name="STATE_255"
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 4
+			arms_factory = 5
+			industrial_complex = 6
+			air_base = 8
+		}
+		add_core_of = RUS
+	}
+	provinces={
+		24 502 1016 1364 2058 3080 4032 7674 7869 7897 7938 8011 8090 8140 8265 
+	}
+	buildings_max_level_factor=1.000
+        manpower=62502000
+        state_category = megalopolis
+}

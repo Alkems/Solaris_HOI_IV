@@ -1,0 +1,27 @@
+state={
+	id=37
+	name="Crateris"
+	resources={
+		tungsten=10
+		oil=11
+		steel=27
+		aluminium=50
+	}
+	history={
+		owner = LUN
+		victory_points = { 6447 20 }
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 1
+		}
+		add_core_of = LUN
+	}
+	provinces={
+		584 1072 1275 1494 2143 2353 6119 6435 6437 6438 6441 6445 6447 6450 6454 
+	}
+	buildings_max_level_factor=1.000
+        manpower=17560203
+        state_category = city
+}

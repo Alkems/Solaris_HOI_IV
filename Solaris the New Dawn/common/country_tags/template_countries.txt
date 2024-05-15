@@ -1,0 +1,5 @@
+TST = "countries/Test.txt"
+LUN = "countries/Lunaria.txt"
+EUR = "countries/Europe.txt"
+RUS = "countries/Russoviet.txt"
+GCH = "countries/Gchina.txt"

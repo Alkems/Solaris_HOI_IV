@@ -1,0 +1,14 @@
+state={
+	id=7
+	name="STATE_7"
+	history={
+		owner = RUS
+		add_core_of = RUS
+	}
+	provinces={
+		746 1278 6859 6895 6902 
+	}
+	buildings_max_level_factor=1.000
+        manpower=10400
+        state_category = wasteland
+}
