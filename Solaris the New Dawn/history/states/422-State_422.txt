@@ -1,10 +1,14 @@
 state={
 	id=422
 	name="STATE_422"
+	history={
+		owner = GCH
+		add_core_of = GCH
+	}
 	provinces={
 		1871 4125 4784 9102 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
-        state_category = city
+        manpower=3500000
+        state_category = wasteland
 }

@@ -13,6 +13,11 @@ EUR = {
 	color_ui = rgb { 87 160 255 }
 }
 
+AEM = {
+	color = rgb { 1 16 125 }
+	color_ui = rgb { 1 16 125 }
+}
+
 RUS = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 163 17 31 }
@@ -21,4 +26,9 @@ RUS = {
 GCH = {
 	color = rgb { 255 0 0 }
 	color_ui = rgb { 255 0 0 }
+}
+
+AFR = {
+	color = rgb { 243 164 84 }
+	color_ui = rgb { 243 164 84 }
 }

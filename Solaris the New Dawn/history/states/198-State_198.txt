@@ -1,10 +1,26 @@
 state={
 	id=198
 	name="STATE_198"
+	resources={
+		tungsten=1
+		oil=5
+		steel=5
+		aluminium=2
+		rubber=3
+	}
+	history={
+		owner = AEM
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = AEM
+	}
 	provinces={
 		511 570 1343 2123 3472 3614 3946 4355 4726 5422 5773 6227 7212 7230 7285 7302 7340 7403 7415 7432 7476 7497 7540 7576 7595 7660 7687 7698 7813 7887 
 	}
 	buildings_max_level_factor=1.000
         manpower=2500000
-        state_category = city
+        state_category = town
 }

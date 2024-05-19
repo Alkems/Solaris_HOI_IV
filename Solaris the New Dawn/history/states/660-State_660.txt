@@ -1,10 +1,17 @@
 state={
 	id=660
 	name="STATE_660"
+	history={
+		owner = AFR
+		buildings = {
+			industrial_complex = 1
+		}
+		add_core_of = AFR
+	}
 	provinces={
 		76 476 2448 3644 4729 5183 5338 10588 10646 10987 11045 11088 11211 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
+        manpower=52500000
         state_category = city
 }

@@ -1,10 +1,27 @@
 state={
 	id=631
-	name="STATE_631"
+	name="	Bamako"
+	resources={
+		tungsten=1
+		oil=12
+		steel=5
+		aluminium=2
+		rubber=10
+		chromium=25
+	}
+	history={
+		owner = AFR
+		victory_points = { 10765 30 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = AFR
+	}
 	provinces={
 		332 839 2949 4807 5626 10502 10628 10668 10732 10765 10859 10919 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
-        state_category = city
+        manpower=32500000
+        state_category = town
 }

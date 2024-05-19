@@ -1,10 +1,14 @@
 state={
 	id=525
 	name="STATE_525"
+	history={
+		owner = AFR
+		add_core_of = AFR
+	}
 	provinces={
 		5049 9775 9793 9956 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
-        state_category = city
+        manpower=6500000
+        state_category = wasteland
 }

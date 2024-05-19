@@ -1,6 +1,13 @@
 state={
 	id=206
 	name="STATE_206"
+	resources={
+		tungsten=1
+		oil=12
+		steel=12
+		aluminium=2
+		rubber=10
+	}
 	history={
 		owner = RUS
 		add_core_of = RUS

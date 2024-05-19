@@ -1,4 +1,20 @@
 division_template = {
+    name = "KABOOM"
+
+    regiments = {
+        heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+		heavy_armor = { x = 1 y = 0 }
+		heavy_armor = { x = 1 y = 1 }
+    }
+	support = {
+        mot_recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }			
+	}
+}
+
+division_template = {
     name = "Sacrifice"
 
     regiments = {
@@ -15,6 +31,11 @@ division_template = {
         infantry = { x = 2 y = 2 }
 		infantry = { x = 2 y = 3 }
     }
+	support = {
+        mot_recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }			
+	}
 }
 
 division_template = {
@@ -54,6 +75,46 @@ division_template = {
 	 	engineer = { x = 0 y = 1 }
         artillery = { x = 0 y = 2 }			
 	}
+}
+
+units = {
+    division= {
+        name = "1st KABOOM Unit"
+        location = 6447
+        division_template = "KABOOM"
+        start_experience_factor = 0.7   #optional, otherwise starts with 0 experience
+        start_equipment_factor = 0.9    #optional, otherwise starts with equipment factor of 1 (maximum)
+    }
+}
+
+units = {
+    division= {
+        name = "2nd KABOOM Unit"
+        location = 6447
+        division_template = "KABOOM"
+        start_experience_factor = 0.4   #optional, otherwise starts with 0 experience
+        start_equipment_factor = 1    #optional, otherwise starts with equipment factor of 1 (maximum)
+    }
+}
+
+units = {
+    division= {
+        name = "3rd KABOOM Unit"
+        location = 6447
+        division_template = "KABOOM"
+        start_experience_factor = 1   #optional, otherwise starts with 0 experience
+        start_equipment_factor = 1    #optional, otherwise starts with equipment factor of 1 (maximum)
+    }
+}
+
+units = {
+    division= {
+        name = "4th KABOOM Unit"
+        location = 6447
+        division_template = "KABOOM"
+        start_experience_factor = 0.7   #optional, otherwise starts with 0 experience
+        start_equipment_factor = 1    #optional, otherwise starts with equipment factor of 1 (maximum)
+    }
 }
 
 units = {

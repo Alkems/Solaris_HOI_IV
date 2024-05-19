@@ -1,10 +1,27 @@
 state={
 	id=883
 	name="STATE_883"
+	resources={
+		tungsten=1
+		oil=5
+		steel=5
+		aluminium=2
+		rubber=3
+	}
+	history={
+		owner = GCH
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = GCH
+	}
 	provinces={
 		664 711 1655 2744 3290 3573 3738 5335 5729 12378 12395 12547 12585 12626 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
+        manpower=7500000
         state_category = city
 }

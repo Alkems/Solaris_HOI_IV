@@ -1,10 +1,19 @@
 state={
 	id=577
 	name="STATE_577"
+	history={
+		owner = AFR
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = AFR
+	}
 	provinces={
 		103 2019 3235 4237 4561 5268 5336 9909 10032 10138 10236 10302 10314 10329 10386 10444 10489 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
+        manpower=72500000
         state_category = city
 }

@@ -1,0 +1,14 @@
+characters = {
+    GFX_portrait_amahle = {
+        name = GFX_portrait_amahle
+        portraits = {
+            civilian = {
+                large = GFX_portrait_amahle
+            }
+        }
+        country_leader = {
+            ideology = anarchism
+            traits = {  }
+        }
+    }
+}

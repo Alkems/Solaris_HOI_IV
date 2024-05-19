@@ -1,6 +1,16 @@
 state={
 	id=933
 	name="STATE_933"
+	history={
+		owner = AFR
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = AFR
+	}
 	provinces={
 		702 4182 4655 12772 
 	}

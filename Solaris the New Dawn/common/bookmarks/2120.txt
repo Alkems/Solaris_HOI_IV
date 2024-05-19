@@ -22,6 +22,14 @@ bookmarks = {
 			history = CHI_NDB_DESC_LOC
 			ideology = communism
 		}
+		"AFR"={
+			history = AFR_NDB_DESC_LOC
+			ideology = neutrality
+		}
+		"AEM"={
+			history = AEM_NDB_DESC_LOC
+			ideology = democratic
+		}
 		effect = {
 			randomize_weather = 12345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

@@ -1,10 +1,18 @@
 state={
 	id=833
 	name="STATE_833"
+	history={
+		owner = GCH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = GCH
+	}
 	provinces={
 		1176 2226 5147 5155 12251 12337 12374 12415 
 	}
 	buildings_max_level_factor=1.000
         manpower=2500000
-        state_category = city
+        state_category = town
 }

@@ -1,10 +1,20 @@
 state={
 	id=844
-	name="STATE_844"
+	name="Brasilia"
+	history={
+		owner = AEM
+		victory_points = { 2930 50 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		add_core_of = AEM
+	}
 	provinces={
 		111 382 1676 1973 2097 2918 2930 3717 4623 5318 12017 12030 12038 12075 12119 12131 12140 12219 12283 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
+        manpower=132500000
         state_category = city
 }

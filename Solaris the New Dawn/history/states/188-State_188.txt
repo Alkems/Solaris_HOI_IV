@@ -1,6 +1,13 @@
 state={
 	id=188
 	name="STATE_188"
+	resources={
+		tungsten=1
+		oil=5
+		steel=5
+		aluminium=2
+		rubber=3
+	}
 	history={
 		owner = RUS
 		buildings = {

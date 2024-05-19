@@ -1,10 +1,19 @@
 state={
 	id=693
 	name="STATE_693"
+	history={
+		owner = AEM
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		add_core_of = AEM
+	}
 	provinces={
 		429 1885 2315 2601 2893 3782 4956 5791 11053 11062 11176 11309 11339 11404 11479 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
+        manpower=12500000
         state_category = city
 }

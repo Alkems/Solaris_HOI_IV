@@ -1,10 +1,20 @@
 state={
 	id=694
 	name="STATE_694"
+	history={
+		owner = GCH
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = GCH
+	}
 	provinces={
 		1223 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
+        manpower=12500000
         state_category = city
 }

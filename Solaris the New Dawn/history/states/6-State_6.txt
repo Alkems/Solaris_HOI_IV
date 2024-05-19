@@ -1,10 +1,14 @@
 state={
 	id=6
 	name="STATE_6"
+	history={
+		owner = AEM
+		add_core_of = AEM
+	}
 	provinces={
 		630 1127 3395 5872 6822 6870 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
-        state_category = city
+        manpower=120000
+        state_category = wasteland
 }

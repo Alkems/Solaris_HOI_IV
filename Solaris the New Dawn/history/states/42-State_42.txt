@@ -1,6 +1,14 @@
 state={
 	id=42
 	name="Selenopolis"
+	resources={
+		tungsten=94
+		oil=32
+		steel=200
+		aluminium=20
+		rubber=10
+		chromium=20
+	}
 	history={
 		owner = LUN
 		victory_points = { 339 70 }
@@ -16,6 +24,6 @@ state={
 		68 159 249 339 866 1905 1928 3027 3041 3488 3571 4175 4273 5109 5990 6449 6453 6464 
 	}
 	buildings_max_level_factor=1.000
-        manpower=9560203
+        manpower=29560203
         state_category = city
 }

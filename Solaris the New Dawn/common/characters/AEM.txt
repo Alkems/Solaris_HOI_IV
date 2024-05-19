@@ -1,0 +1,14 @@
+characters = {
+    GFX_portrait_alyssa = {
+        name = GFX_portrait_alyssa
+        portraits = {
+            civilian = {
+                large = GFX_portrait_alyssa
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {  }
+        }
+    }
+}

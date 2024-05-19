@@ -31,6 +31,16 @@ spriteTypes = {
 		name = "GFX_portrait_ling"
 		texturefile = "gfx/leaders/GCH/ling.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_portrait_amahle"
+		texturefile = "gfx/leaders/AFR/amahle.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_alyssa"
+		texturefile = "gfx/leaders/AEM/alyssa.dds"
+	}
 
 
 	### GER

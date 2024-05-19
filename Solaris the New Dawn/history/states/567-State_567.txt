@@ -1,10 +1,30 @@
 state={
 	id=567
-	name="STATE_567"
+	name="India"
+	resources={
+		tungsten=1
+		oil=12
+		steel=5
+		aluminium=2
+		rubber=10
+		chromium=20
+	}
+	history={
+		owner = GCH
+		victory_points = { 2242 50 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 4
+			industrial_complex = 4
+			air_base = 10
+			dockyard = 3
+		}
+		add_core_of = GCH
+	}
 	provinces={
 		338 1674 1694 1784 2242 2505 2829 3222 3411 4105 4651 5398 5454 5770 6287 9919 9920 9982 10033 10078 10139 10152 10174 10188 10237 10238 10270 10330 10415 10479 10516 10550 10617 10717 10727 10773 10876 10932 11018 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
-        state_category = city
+        manpower=1231532010
+        state_category = megalopolis
 }

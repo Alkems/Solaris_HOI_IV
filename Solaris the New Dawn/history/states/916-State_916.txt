@@ -1,10 +1,28 @@
 state={
 	id=916
-	name="STATE_916"
+	name="Bloemfontein"
+	resources={
+		tungsten=13
+		oil=320
+		steel=50
+		aluminium=9
+		rubber=16
+	}
+	history={
+		owner = AFR
+		victory_points = { 1258 100 }
+		buildings = {
+			infrastructure = 5
+			arms_factory = 2
+			industrial_complex = 10
+			air_base = 10
+		}
+		add_core_of = AFR
+	}
 	provinces={
 		763 1076 1258 1761 2295 4316 5515 12556 12634 12737 
 	}
 	buildings_max_level_factor=1.000
-        manpower=2500000
-        state_category = city
+        manpower=4500000
+        state_category = megalopolis
 }

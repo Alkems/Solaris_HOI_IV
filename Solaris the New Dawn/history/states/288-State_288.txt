@@ -1,6 +1,13 @@
 state={
 	id=288
 	name="London"
+	resources={
+		tungsten=1
+		oil=5
+		steel=5
+		aluminium=2
+		rubber=3
+	}
 	history={
 		owner = EUR
 		victory_points = { 8408 20 }

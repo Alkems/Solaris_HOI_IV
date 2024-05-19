@@ -1,6 +1,6 @@
 state={
 	id=23
-	name="STATE_23"
+	name="Taipei"
 	resources={
 		tungsten=3
 		oil=32

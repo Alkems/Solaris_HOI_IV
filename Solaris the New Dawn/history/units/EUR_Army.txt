@@ -1,4 +1,24 @@
 division_template = {
+    name = "KABOOM"
+
+    regiments = {
+        medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 3 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		medium_armor = { x = 1 y = 2 }
+		medium_armor = { x = 1 y = 3 }
+    }
+	support = {
+        mot_recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }			
+	}
+}
+
+division_template = {
     name = "Europe's Democracy"
 
     regiments = {
@@ -15,6 +35,11 @@ division_template = {
         infantry = { x = 2 y = 2 }
 		infantry = { x = 2 y = 3 }
     }
+	support = {
+        mot_recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }			
+	}
 }
 
 division_template = {
@@ -55,6 +80,56 @@ division_template = {
 	 	engineer = { x = 0 y = 1 }
         artillery = { x = 0 y = 2 }			
 	}
+}
+
+units = {
+    division= {
+        name = "1st KABOOM Unit"
+        location = 2834
+        division_template = "KABOOM"
+        start_experience_factor = 1   #optional, otherwise starts with 0 experience
+        start_equipment_factor = 1    #optional, otherwise starts with equipment factor of 1 (maximum)
+    }
+}
+
+units = {
+    division= {
+        name = "2nd KABOOM Unit"
+        location = 2834
+        division_template = "KABOOM"
+        start_experience_factor = 1   #optional, otherwise starts with 0 experience
+        start_equipment_factor = 1    #optional, otherwise starts with equipment factor of 1 (maximum)
+    }
+}
+
+units = {
+    division= {
+        name = "3rd KABOOM Unit"
+        location = 2834
+        division_template = "KABOOM"
+        start_experience_factor = 1   #optional, otherwise starts with 0 experience
+        start_equipment_factor = 1    #optional, otherwise starts with equipment factor of 1 (maximum)
+    }
+}
+
+units = {
+    division= {
+        name = "4th KABOOM Unit"
+        location = 2834
+        division_template = "KABOOM"
+        start_experience_factor = 1   #optional, otherwise starts with 0 experience
+        start_equipment_factor = 1    #optional, otherwise starts with equipment factor of 1 (maximum)
+    }
+}
+
+units = {
+    division= {
+        name = "5th KABOOM Unit"
+        location = 2834
+        division_template = "KABOOM"
+        start_experience_factor = 0.5   #optional, otherwise starts with 0 experience
+        start_equipment_factor = 1    #optional, otherwise starts with equipment factor of 1 (maximum)
+    }
 }
 
 units = {
