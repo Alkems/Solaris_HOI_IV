@@ -1,0 +1,17 @@
+add_namespace = eu
+
+country_event = {
+    id = eu.join_faction
+    title = "Join faction with America"
+    desc = "Join factions with America"
+    picture = GFX_evt_generic_signing_document
+
+    is_triggered_only = yes
+
+    option = {
+        name = "They will now follow our lead."
+        EUR = {
+            add_to_faction = AEM
+        }
+    }
+}

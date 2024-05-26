@@ -82,3 +82,6 @@ set_popularities = {
 	communism = 0
 	neutrality = 1
 }
+
+create_faction = NATO
+add_to_faction = EUR
