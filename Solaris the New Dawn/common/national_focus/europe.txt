@@ -16,7 +16,7 @@
 
     focus = {
         id = europe_laws
-        icon = pwease
+        icon = europe
         x = 27
         y = 0
         cost = 8
@@ -29,7 +29,7 @@
 	# DEMOCRACY
 	focus = {
         id = european_democracy
-        icon = pwease
+        icon = europe
         x = 20
         y = 1
         cost = 10
@@ -48,7 +48,7 @@
 	
 	focus = {
         id = arm_the_nation
-        icon = pwease
+        icon = GFX_goal_generic_production
         x = 18
         y = 2
         cost = 10
@@ -67,7 +67,7 @@
 	
 	focus = {
 		id = defense
-		icon = pwease
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 22
 		y = 2
 		cost = 10
@@ -97,7 +97,7 @@
 	
 	focus = {
         id = join_faction
-        icon = pwease
+        icon = nato
         x = 20
         y = 3
         cost = 20
@@ -110,10 +110,37 @@
         }
     }
 	
+	focus = {
+        id = nato_troops
+        icon = nato
+        x = 20
+        y = 4
+        cost = 20
+		
+		prerequisite = { focus = join_faction }
+
+        completion_reward = {
+            random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"NATO Tank Unit\" division_template = \"KABOOM\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = EUR
+					count = 5
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"NATO Infantry Unit\" division_template = \"Europe's Democracy\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = EUR
+					count = 5
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+        }
+    }
+	
 	# fascism
 	focus = {
         id = fascist_ideas
-        icon = pwease
+        icon = GFX_goal_generic_production
         x = 36
         y = 1
         cost = 10
@@ -130,7 +157,7 @@
 	
 	focus = {
         id = european_fascism
-        icon = pwease
+        icon = europe
         x = 34
         y = 1
         cost = 10
@@ -150,7 +177,7 @@
 	
 	focus = {
         id = military_focus
-        icon = pwease
+        icon = GFX_goal_generic_construct_mil_factory
         x = 34
         y = 2
         cost = 10
@@ -179,7 +206,7 @@
 	
 	focus = {
         id = war_russia
-        icon = sov
+        icon = GFX_goal_generic_major_war
         x = 32
         y = 3
         cost = 10
@@ -195,7 +222,7 @@
 	
 	focus = {
         id = war_china
-        icon = sov
+        icon = GFX_goal_generic_major_war
         x = 34
         y = 3
         cost = 10
@@ -211,7 +238,7 @@
 	
 	focus = {
         id = war_africa
-        icon = sov
+        icon = GFX_goal_generic_major_war
         x = 36
         y = 3
         cost = 10
@@ -227,7 +254,7 @@
 	
 	focus = {
         id = war_aem
-        icon = sov
+        icon = GFX_goal_generic_major_war
         x = 34
         y = 4
         cost = 10
@@ -245,7 +272,7 @@
 	
 	focus = {
         id = war_moon
-        icon = sov
+        icon = GFX_goal_generic_major_war
         x = 34
         y = 5
         cost = 10
@@ -261,7 +288,7 @@
 	
 	focus = {
         id = earth_coalition
-        icon = sov
+        icon = earth
         x = 34
         y = 6
         cost = 20
@@ -304,6 +331,7 @@
 						add_extra_state_shared_building_slots = 5		   
 						add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
 				   }
+			country_event = { id = earth.change_name_and_flag }
 			
 		}
     }

@@ -15,3 +15,29 @@ country_event = {
         }
     }
 }
+
+add_namespace = earth
+
+country_event = {
+    id = earth.change_name_and_flag
+    title = "The Earth Coalition"
+    desc = "Do you want to change the country's name and flag to Earth Federation?"
+    picture = GFX_evt_generic_signing_document
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Yes, change the name and flag."
+        ai_chance = {
+            factor = 95
+        }
+        set_cosmetic_tag = EAR
+    }
+
+    option = {
+        name = "No, keep the current name and flag."
+        ai_chance = {
+            factor = 5
+        }
+    }
+}
