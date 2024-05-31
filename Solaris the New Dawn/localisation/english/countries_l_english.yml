@@ -153,3 +153,6 @@
  EAR:0 "Earth Federation"
  EAR_DEF:0 "Earth Federation"
  EAR_ADJ:0 "Earth Federation"
+
+ ww3_enemies:0 "True Enemies"
+ ww3_allies:0 "WW3 Allies"

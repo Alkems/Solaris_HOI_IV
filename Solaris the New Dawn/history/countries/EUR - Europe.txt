@@ -83,5 +83,21 @@ set_popularities = {
 	neutrality = 1
 }
 
+add_opinion_modifier = {
+    target = RUS
+    modifier = ww3_enemies
+}
+
+add_opinion_modifier = {
+    target = GCH
+    modifier = ww3_enemies
+}
+
+add_opinion_modifier = {
+    target = AEM
+    modifier = ww3_allies
+}
+
+
 create_faction = NATO
 add_to_faction = EUR

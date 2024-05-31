@@ -82,3 +82,18 @@ set_popularities = {
 	communism = 0
 	neutrality = 0
 }
+
+add_opinion_modifier = {
+    target = RUS
+    modifier = ww3_enemies
+}
+
+add_opinion_modifier = {
+    target = GCH
+    modifier = ww3_enemies
+}
+
+add_opinion_modifier = {
+    target = EUR
+    modifier = ww3_allies
+}
