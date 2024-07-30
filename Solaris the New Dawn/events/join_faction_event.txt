@@ -16,6 +16,22 @@ country_event = {
     }
 }
 
+country_event = {
+    id = eu.join_faction_aem
+    title = "Join faction with Europe"
+    desc = "Join factions with Europe"
+    picture = GFX_evt_generic_signing_document
+
+    is_triggered_only = yes
+
+    option = {
+        name = "NATO is once again."
+        AEM = {
+            add_to_faction = EUR
+        }
+    }
+}
+
 add_namespace = earth
 
 country_event = {

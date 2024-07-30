@@ -1,0 +1,1405 @@
+﻿focus_tree = {
+    id = americaEmpireFocus
+
+    country = {
+        factor = 0  # Changed from 0 to a positive number to allow AI selection under conditions
+
+        modifier = {
+            add = 10  # This increases the weight if the conditions are met
+            tag = AEM  # Assuming 'RDA' is your specific nation
+        }
+    }
+
+    default = no  # Ensures that this does not replace the generic tree by default
+
+    continuous_focus_position = { x = 10 y = 1000 }
+
+    focus = {
+        id = america_laws
+        icon = GFX_goal_generic_intelligence_exchange
+        x = 27
+        y = 0
+        cost = 8
+
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+	
+	# DEMOCRACY
+	focus = {
+        id = american_democracy
+        icon = GFX_goal_generic_intelligence_exchange
+        x = 20
+        y = 1
+        cost = 10
+		
+		prerequisite = { focus = america_laws }
+		mutually_exclusive = { focus = american_fascism }	
+		
+		available = {
+			democratic > 0.90
+		}
+
+        completion_reward = {
+            add_political_power = 100
+        }
+    }
+	
+	focus = {
+        id = arm_the_nation_AEM
+        icon = GFX_goal_generic_production
+        x = 18
+        y = 2
+        cost = 10
+		
+		prerequisite = { focus = american_democracy }
+
+        completion_reward = {
+            army_experience = 20
+			add_manpower = 100000
+			random_owned_state = {
+						add_extra_state_shared_building_slots = 5		   
+						add_building_construction = { type = arms_factory level = 5 instant_build = yes }
+				   }
+        }
+    }
+	
+	focus = {
+		id = defense_AEM
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 22
+		y = 2
+		cost = 10
+			
+		prerequisite = { focus = american_democracy }
+
+		completion_reward = {
+			261 = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+			}
+			285 = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+						add_building_construction = { type = bunker level = 5 instant_build = yes }
+			}
+		}
+	}
+
+	
+	focus = {
+        id = join_faction_AEM
+        icon = nato
+        x = 20
+        y = 3
+        cost = 20
+		
+		prerequisite = { focus = defense_AEM }
+		prerequisite = { focus = arm_the_nation_AEM }
+
+        completion_reward = {
+            country_event = { id = eu.join_faction_aem }
+        }
+    }
+	
+	focus = {
+        id = nato_troops_AEM
+        icon = nato
+        x = 20
+        y = 4
+        cost = 20
+		
+		prerequisite = { focus = join_faction_AEM }
+
+        completion_reward = {
+            random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"NATO Tank Unit\" division_template = \"KABOOM\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = AEM
+					count = 5
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "name = \"NATO Infantry Unit\" division_template = \"Europe's Democracy\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = AEM
+					count = 5
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+        }
+    }
+	
+	# fascism
+	focus = {
+        id = fascist_ideas_AEM
+        icon = GFX_goal_generic_production
+        x = 36
+        y = 1
+        cost = 10
+		
+		prerequisite = { focus = america_laws }
+
+        completion_reward = {
+            add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+        }
+    }
+	
+	focus = {
+        id = american_fascism
+        icon = GFX_goal_generic_production
+        x = 34
+        y = 1
+        cost = 10
+		
+		available = {
+			fascism > 0.50
+		}
+		
+		prerequisite = { focus = america_laws }
+		mutually_exclusive = { focus = american_democracy }	
+
+        completion_reward = {
+            army_experience = 15
+			add_political_power = 50
+        }
+    }
+	
+	focus = {
+        id = military_focus_AEM
+        icon = GFX_goal_generic_construct_mil_factory
+        x = 34
+        y = 2
+        cost = 10
+		
+		available = {
+			fascism > 0.50
+		}
+		
+		prerequisite = { focus = american_fascism }
+
+        completion_reward = {
+            army_experience = 30
+			add_manpower = 100000
+			random_owned_state = {
+						add_extra_state_shared_building_slots = 5		   
+						add_building_construction = { type = arms_factory level = 5 instant_build = yes }
+				   }
+			261 = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = bunker level = 2 instant_build = yes }
+						add_building_construction = { type = bunker level = 2 instant_build = yes }
+						add_building_construction = { type = bunker level = 2 instant_build = yes }
+			}
+        }
+    }
+	
+	focus = {
+        id = war_russia_AEM
+        icon = GFX_goal_generic_major_war
+        x = 32
+        y = 3
+        cost = 10
+		prerequisite = { focus = military_focus_AEM }
+
+		completion_reward = {	
+			create_wargoal = {
+				type = annex_everything
+				target = RUS
+			}
+		}
+    }
+	
+	focus = {
+        id = war_china_AEM
+        icon = GFX_goal_generic_major_war
+        x = 34
+        y = 3
+        cost = 10
+		prerequisite = { focus = military_focus_AEM }
+
+		completion_reward = {	
+			create_wargoal = {
+				type = annex_everything
+				target = GCH
+			}
+		}
+    }
+	
+	focus = {
+        id = war_africa_AEM
+        icon = GFX_goal_generic_major_war
+        x = 36
+        y = 3
+        cost = 10
+		prerequisite = { focus = military_focus_AEM }
+
+		completion_reward = {	
+			create_wargoal = {
+				type = annex_everything
+				target = AFR
+			}
+		}
+    }
+	
+	focus = {
+        id = war_eu
+        icon = GFX_goal_generic_major_war
+        x = 34
+        y = 4
+        cost = 10
+		prerequisite = { focus = war_africa_AEM }
+		prerequisite = { focus = war_china_AEM }
+		prerequisite = { focus = war_russia_AEM }
+
+		completion_reward = {	
+			create_wargoal = {
+				type = annex_everything
+				target = EUR
+			}
+		}
+    }
+	
+	focus = {
+        id = war_moon_AEM
+        icon = GFX_goal_generic_major_war
+        x = 34
+        y = 5
+        cost = 10
+		prerequisite = { focus = war_eu }
+
+		completion_reward = {	
+			create_wargoal = {
+				type = annex_everything
+				target = LUN
+			}
+		}
+    }
+	
+	focus = {
+        id = earth_coalition_AEM
+        icon = earth
+        x = 34
+        y = 6
+        cost = 20
+		prerequisite = { focus = war_moon_AEM }
+		
+		available = {
+			controls_state = 263
+			controls_state = 402
+			controls_state = 916
+			controls_state = 844
+			controls_state = 911
+			controls_state = 600
+			controls_state = 414
+			controls_state = 324
+			controls_state = 42
+			controls_state = 37
+			controls_state = 36
+			controls_state = 898
+		}
+
+		completion_reward = {	
+			263 = { add_core_of = eur }
+			402 = { add_core_of = eur }
+			567 = { add_core_of = eur }
+			916 = { add_core_of = eur }
+			844 = { add_core_of = eur }
+			911 = { add_core_of = eur }
+			600 = { add_core_of = eur }
+			414 = { add_core_of = eur }
+			324 = { add_core_of = eur }
+			184 = { add_core_of = eur }
+			42 = { add_core_of = eur }
+			37 = { add_core_of = eur }
+			36 = { add_core_of = eur }
+			random_owned_state = {
+						add_extra_state_shared_building_slots = 5		   
+						add_building_construction = { type = arms_factory level = 5 instant_build = yes }
+				   }
+			random_owned_state = {
+						add_extra_state_shared_building_slots = 5		   
+						add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
+				   }
+			country_event = { id = earth.change_name_and_flag }
+			
+		}
+    }
+
+
+	###########################################
+	########START OF ECONOMY TREE##############
+	###########################################
+
+	focus = { #Economy Start
+		id = GEN_economy_start_AEM
+		icon = GFX_goal_generic_consumer_goods
+		x = 9
+		y = 0
+		cost = 4
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+					bonus = 0.33
+					ahead_reduction = 0.5
+					uses = 1
+					category = mot_rockets
+				}	
+				add_political_power = -200			
+		}
+	}
+
+
+	focus = { #Economy Roads 1
+		id = GEN_economy_roads_1_AEM
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GEN_economy_start_AEM }
+		x = 8
+		y = 1
+		cost = 5
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {						
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1		
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		
+			
+		}
+		
+	}
+
+	focus = { #Economy Roads 2
+		id = GEN_economy_roads_2_AEM
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GEN_economy_roads_1_AEM }
+		x = 8
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {					    
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2		
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+				
+
+		}
+	}
+
+	focus = { #Economy Civilian Factories 1
+		id = GEN_economy_civ_fact_1_AEM
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = GEN_economy_start_AEM }
+		mutually_exclusive = { focus = GEN_economy_mil_fact_1_AEM }		
+		x = 10
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {		
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1 				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = { #Economy Civilian Factories 3
+		id = GEN_economy_civ_fact_3_AEM
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = GEN_economy_civ_fact_1_AEM }
+		x = 10
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {					
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1 				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}		
+			
+			#add_ideas = factory_reorganization
+		}
+	}
+
+	focus = { #Economy Military Factories 1
+		id = GEN_economy_mil_fact_1_AEM
+			available = {
+				
+				#NOT = { has_war_together_with = ENG }
+				#NOT = { is_in_faction_with = NZL }
+				NOT = { has_government = democratic }
+			}	
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = GEN_economy_start_AEM }
+		mutually_exclusive = { focus = GEN_economy_civ_fact_1_AEM }	
+		x = 14
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 8
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1 				
+			}		    					
+				add_stability = -0.05           
+				add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	focus = { #Economy Military Factories 3
+		id = GEN_economy_mil_fact_3_AEM
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = GEN_economy_mil_fact_1_AEM }
+		x = 14
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 19
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+				add_stability = -0.05            
+				add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+
+	focus = { #Eco Expansion Mining 1
+		id = GEN_eco_expansion__mining10_AEM
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = GEN_economy_start_AEM }
+		x = 4
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+	}
+
+	focus = { #Eco Expansion Mining 1 Steel
+		id = GEN_eco_expansion__mining1_steel_AEM
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = GEN_eco_expansion__mining10_AEM }
+		mutually_exclusive = { focus = GEN_eco_expansion__mining1_special_AEM }
+		mutually_exclusive = { focus = GEN_eco_expansion__mining1_oil_AEM }
+		x = 2
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				  
+			random_owned_state = {
+			add_resource = {
+				type = steel
+				amount = 7
+						}
+				   }		
+		}
+	}
+
+	focus = { #Eco Expansion Mining 2 Steel
+		id = GEN_eco_expansion__mining2_steel_AEM
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = GEN_eco_expansion__mining1_steel_AEM }
+		available =
+		{
+
+		}
+		x = 2
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_state = {
+			add_resource = {
+				type = steel
+				amount = 11
+						}
+				   }
+		}
+	}
+
+	focus = { #Eco Expansion Mining 3 Steel
+		id = GEN_eco_expansion__mining3_steel_AEM
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = GEN_eco_expansion__mining2_steel_AEM }
+		available =
+		{
+
+		}
+		x = 2
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+			add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = excavation_tech
+				}		
+			add_political_power = 5
+			add_stability = 0.05		
+			random_owned_state = {
+			add_resource = {
+				type = steel
+				amount = 14
+						}
+				   }
+		}
+	}
+
+	focus = { #Eco Expansion Mining 1 special
+		id = GEN_eco_expansion__mining1_special_AEM
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = GEN_eco_expansion__mining10_AEM }
+		mutually_exclusive = { focus = GEN_eco_expansion__mining1_oil_AEM }
+		mutually_exclusive = { focus = GEN_eco_expansion__mining1_steel_AEM }
+		x = 4
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+			random_owned_state = {
+			add_resource = {
+				type = tungsten
+				amount = 3
+						}
+				   }
+			random_owned_state = {
+			add_resource = {
+				type = aluminium
+				amount = 3
+						}
+				   }
+			random_owned_state = {
+			add_resource = {
+				type = chromium
+				amount = 3
+						}
+				   }			   
+		}
+	}
+
+	focus = { #Eco Expansion Mining 2 special
+		id = GEN_eco_expansion__mining2_special_AEM
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = GEN_eco_expansion__mining1_special_AEM }
+		available =
+		{
+
+
+		}
+		x = 4
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+			add_tech_bonus = {
+					bonus = 0.75
+					uses = 1
+					category = excavation_tech
+				}		
+			random_owned_state = {
+			add_resource = {
+				type = tungsten
+				amount = 5
+						}
+				   }
+			random_owned_state = {
+			add_resource = {
+				type = aluminium
+				amount = 5
+						}
+				   }
+			random_owned_state = {
+			add_resource = {
+				type = chromium
+				amount = 5
+						}
+				   }			   
+		}
+	}
+
+	focus = { #
+		id = GEN_eco_expansion__advanced_evacuation_AEM
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = GEN_eco_expansion__mining2_special_AEM focus = GEN_eco_expansion__mining2_rubber_AEM focus = GEN_eco_expansion__mining3_steel_AEM}
+		available =
+		{
+
+
+		}
+		x = 4
+		y = 5
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+			army_experience = 25		
+			add_tech_bonus = {
+					bonus = 0.80
+					uses = 1
+					category = excavation_tech
+				}						   
+		}
+	}
+
+	focus = { #Eco Expansion Mining 1 Oil
+		id = GEN_eco_expansion__mining1_oil_AEM
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = GEN_eco_expansion__mining10_AEM }
+		mutually_exclusive = { focus = GEN_eco_expansion__mining1_special_AEM }
+		mutually_exclusive = { focus = GEN_eco_expansion__mining1_steel_AEM }
+		x = 6
+		y = 2
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+			random_owned_state = {
+			add_resource = {
+				type = oil
+				amount = 14
+						}
+				   }		   
+				}		
+	}
+
+	focus = { #Eco Expansion Mining 2 Oil
+		id = GEN_eco_expansion__mining2_oil_AEM
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = GEN_eco_expansion__mining1_oil_AEM }
+		x = 6
+		y = 3
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {					
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = refinery_bonus
+				bonus = 0.5
+				uses = 2
+				category = synth_resources
+			}
+		}
+	}
+
+	focus = { #Eco Expansion Mining 2 rubber
+		id = GEN_eco_expansion__mining2_rubber_AEM
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = GEN_eco_expansion__mining2_oil_AEM }
+		x = 6
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 15
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+			add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = excavation_tech
+				}		
+			random_owned_state = {
+			add_resource = {
+				type = rubber
+				amount = 14
+						}
+				   }
+			random_owned_state = {
+			add_resource = {
+				type = oil
+				amount = 7
+						}
+				   }			   
+		}
+	}
+
+	####################################################################################################################################################################################################
+	####################################################################################################################################################################################################
+	####################################################################################################################################################################################################
+	####################################################################################################################################################################################################
+
+	focus = { #Economy Complete 
+		id = GEN_economy_complete_AEM
+		icon = GFX_focus_mex_privatisation
+
+		prerequisite = { focus = GEN_economy_roads_2_AEM }
+		prerequisite = { focus = GEN_economy_civ_fact_3 focus = GEN_economy_mil_fact_3_AEM }
+
+		x = 11
+		y = 4
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+				navy_experience = 15
+				army_experience = 15			
+				add_political_power = 75			
+		}
+	}
+	focus = { #Economy Complete ##################################################################################################
+		id = GEN_economy_strong_AEM
+		icon = GFX_focus_rom_parties_end
+
+
+		prerequisite = { focus = GEN_infrastructure_massadv1_AEM} 
+		prerequisite = 	{focus = GEN_eco_expansion__advanced_evacuation_AEM} 
+		prerequisite = 	{focus = GEN_millls_cdcompleted3_AEM}
+
+		x = 8
+		y = 11
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+			add_political_power = 300
+			air_experience = 200
+			navy_experience = 200
+			army_experience = 200
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	focus = { #
+		id = GEN_infrastructure_ca_AEM
+		icon = GFX_goal_generic_air_fighter
+
+		
+		prerequisite = { focus = GEN_economy_complete_AEM }
+
+
+		x = 8
+		y = 5
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+					random_owned_state = {
+						limit = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+						add_building_construction = {
+							type = air_base
+							level = 2
+							instant_build = yes
+						}				
+					}
+				set_technology = { early_fighter = 1 }				
+				#add_ideas = gen_mass_infrastructure
+
+		}
+	}
+
+	focus = { #
+		id = GEN_infrastructure_ca1_AEM
+		icon = GFX_goal_generic_air_fighter
+
+		
+		prerequisite = { focus = GEN_infrastructure_ca_AEM }
+
+
+		x = 8
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+					random_owned_state = {
+						limit = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+						add_building_construction = {
+							type = air_base
+							level = 2
+							instant_build = yes
+						}				
+					}		
+				#swap_ideas = {
+				#	remove_idea = gen_mass_infrastructure
+				#	add_idea = gen_mass_infrastructure_p1				
+				#}	
+
+		}
+	}
+
+
+	focus = { #
+		id = GEN_infrastructure_ch_AEM
+		icon = GFX_focus_generic_coastal_fort
+
+		prerequisite = { focus = GEN_economy_complete_AEM }
+
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_controlled_by = ROOT
+				}
+			}
+		x = 10
+		y = 5
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_equipment_to_stockpile = { type = convoy amount = 50 producer = ROOT }	
+				random_owned_controlled_state = {
+						limit = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = dockyard
+							level = 1
+							instant_build = yes
+						}
+					}	
+				random_owned_state = {
+					limit = {
+							is_coastal = yes
+							
+						}			
+					add_building_construction = {
+						type = naval_base
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+						level = 1
+						instant_build = yes
+					}				
+				}	
+				#add_ideas = gen_advanceed_infrastructure
+
+
+		}
+	}
+
+	focus = { #
+		id = GEN_infrastructure_ch1_AEM
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = GEN_infrastructure_ch_AEM }
+
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_controlled_by = ROOT
+				}
+			}
+			
+		x = 10
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_equipment_to_stockpile = { type = convoy amount = 100 producer = ROOT }	
+				random_owned_state = {
+					limit = {
+							is_coastal = yes
+						}			
+					add_building_construction = {
+					
+						type = naval_base
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+				
+						limit = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = dockyard
+							level = 1
+							instant_build = yes
+						}
+					}					
+				#swap_ideas = {
+				#	remove_idea = gen_advanceed_infrastructure
+				#	add_idea = gen_advanceed_infrastructure_p1				
+				#}	
+
+
+		}
+	}
+
+
+	focus = { #
+		id = GEN_infrastructure_massadv1_AEM
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = GEN_infrastructure_ch1_AEM  focus = GEN_infrastructure_ca1_AEM}
+
+
+		x = 8
+		y = 8
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+							
+				add_political_power = 30	
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1 				
+			}
+
+		}
+	}
+	########################################################################################################################################
+
+
+	focus = { #
+		id = GEN_millls_concentratedfocus0industrial_complex_AEM
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GEN_economy_complete_AEM }
+		mutually_exclusive = { focus = GEN_millls_dispersedfocus0_AEM }
+
+		x = 13
+		y = 5
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {		
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1 				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = { #
+		id = GEN_millls_concentratedfocus1_AEM
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GEN_millls_concentratedfocus0industrial_complex_AEM }
+
+
+		x = 13
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {		
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1 				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = { #
+		id = GEN_millls_concentratedfocus2_AEM
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GEN_millls_concentratedfocus1_AEM }
+
+
+		x = 13
+		y = 7
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {		
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1 				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	focus = { #
+		id = GEN_millls_dispersedfocus0_AEM
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = GEN_economy_complete_AEM }
+		mutually_exclusive = { focus = GEN_millls_concentratedfocus0industrial_complex_AEM }
+
+		x = 15
+		y = 5
+		cost = 10
+		
+		ai_will_do = {
+			factor = 24
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = dispersed_industry_category
+				}	
+
+		}
+	}
+
+	focus = { #
+		id = GEN_millls_dispersedfocus1_AEM
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = GEN_millls_dispersedfocus0_AEM }
+
+
+		x = 15
+		y = 6
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+
+				random_owned_state = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				   }			
+				
+		}
+	}
+
+	focus = { #
+		id = GEN_millls_dispersedfocus2_AEM
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = GEN_millls_dispersedfocus1_AEM}
+
+
+		x = 15
+		y = 7
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+
+				random_owned_state = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				   }			
+				
+		}
+	}
+
+	focus = { #
+		id = GEN_millls_cdcompleted1_AEM
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = GEN_millls_dispersedfocus2_AEM  focus = GEN_millls_concentratedfocus2_AEM }   
+
+
+		x = 14
+		y = 8
+		cost = 10
+		
+		ai_will_do = {
+			factor = 24
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+
+				random_owned_state = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				   }			
+
+				random_owned_state = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				   }			
+		
+				
+		}
+	}
+
+	focus = { #
+		id = GEN_millls_cdcompleted2_AEM
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = GEN_millls_cdcompleted1_AEM}   
+
+
+		x = 12
+		y = 9
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+
+				random_owned_state = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				   }			
+
+				random_owned_state = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				   }			
+		
+				
+		}
+	}
+
+	focus = { #
+		id = GEN_millls_cdcompleted3_AEM
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = GEN_millls_cdcompleted2_AEM}   
+
+
+		x = 10
+		y = 10
+		cost = 10
+		
+		ai_will_do = {
+			factor = 25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {				
+
+				random_owned_state = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				   }			
+
+				random_owned_state = {
+						add_extra_state_shared_building_slots = 1		   
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				   }			
+		
+				
+		}
+	}
+}
